@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+//DECLARATION DES CLASSES LEXICALES
+
+// Déclaration des classes lexicales
+typedef enum {
+    PROGRAM_TOKEN, CONST_TOKEN, VAR_TOKEN, BEGIN_TOKEN, END_TOKEN, IF_TOKEN,
+    THEN_TOKEN, WHILE_TOKEN, DO_TOKEN, READ_TOKEN, WRITE_TOKEN, PV_TOKEN, PT_TOKEN, PLUS_TOKEN,
+    MOINS_TOKEN, MULT_TOKEN, DIFF_TOKEN, VIR_TOKEN, AFF_TOKEN, INF_TOKEN, INFEG_TOKEN, SUP_TOKEN, SUPEG_TOKEN,
+    PO_TOKEN, PF_TOKEN, ID_TOKEN, ERREUR_TOKEN, FIN_TOKEN, NUM_TOKEN, DIV_TOKEN, EG_TOKEN, EOF_TOKEN,
+    FOR_TOKEN, REPEAT_TOKEN, UNTIL_TOKEN, CASE_TOKEN, OF_TOKEN, DDOT_TOKEN, DOWNTO_TOKEN, INTO_TOKEN, ELSE_TOKEN
+} CODES_LEX;
+
+// Déclaration des types d'erreurs
+typedef enum {
+    PROGRAM_ERREUR, CONST_ERREUR, VAR_ERREUR, BEGIN_ERREUR, END_ERREUR, IF_ERREUR, THEN_ERREUR, WHILE_ERREUR,
+    DO_ERREUR, READ_ERREUR, WRITE_ERREUR, PV_ERREUR, PT_ERREUR, PLUS_ERREUR, MOINS_ERREUR, MULT_ERREUR,
+    DIV_ERREUR, VIR_ERREUR, AFF_ERREUR, EG_ERREUR, DIFF_ERREUR, INF_ERREUR, SUP_ERREUR, INFEG_ERREUR, SUPEG_ERREUR,
+    PO_ERREUR, PF_ERREUR, ID_ERREUR, NUM_ERREUR, CONST_VAR_BEGIN_ERR, INST_ERR, COND_ERR, VAR_BEGIN_ERR, ERREUR_ERR,
+    DOWNTO_ERREUR, INTO_ERREUR, FOR_ERREUR, UNTIL_ERREUR, REPEAT_ERREUR, CASE_ERR, DDOT_ERR, OF_ERREUR
+} Erreurs;
+
+
+
+// Tsym_cour=Tableau de symbole courant
+typedef struct{
+    CODES_LEX CODE;
+    char Nom[20];
+// Numero de ligne pour le suivi en cas d'erreur
+    int ligne;
+}Tsym_cour;
+
+Tsym_cour SYM_COUR;
+
+FILE * fichier;
+char Car_Cour;
+int ligne = 1;
+
+void Lire_Car();
+void Lire_mot();
+void Lire_nombre();
+void Sym_Suiv();
+const char * AfficherToken(CODES_LEX code);
