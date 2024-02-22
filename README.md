@@ -1,1 +1,1 @@
-# Pascal-Compiler
+# Mini Pascal-Compiler
