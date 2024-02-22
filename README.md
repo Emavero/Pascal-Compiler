@@ -7,8 +7,11 @@ Ce projet vise à créer un mini-compilateur en Pascal, capable de traduire un s
 Fonctionnalités prévues :
 
 1)Analyse lexicale : Décomposition du code source en jetons (tokens) significatifs.
+
 2)Analyse syntaxique : Vérification de la structure syntaxique du code source.
+
 3)Analyse sémantique : Vérification des règles sémantiques du langage Pascal, telles que la déclaration correcte des variables, la correspondance des types, et l'utilisation appropriée des opérateurs et des fonctions.
+
 4)Génération de code intermédiaire : Conversion du code source en une représentation intermédiaire.
 
 
