@@ -5,6 +5,7 @@
 #include <AnalyseLexical.h>
 
 
+
 ///////////////////////////////////DEFINITION DE TOUS LES FONCTIONS//////////////////////////////////////
 
 //FONCTION POUR LIRE LE CARACTERE  SUIVANT DU FICHIER
