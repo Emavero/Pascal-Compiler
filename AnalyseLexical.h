@@ -3,6 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
+
 //DECLARATION DES CLASSES LEXICALES
 
 // Déclaration des classes lexicales
