@@ -14,8 +14,7 @@ All contributions are welcome! Whether you are a beginner looking to learn more 
 Notes:
 This project is designed for educational and experimental purposes. While it can be used as a foundation for more complex projects, it is not intended to be a complete and robust compiler for production use.
 
-
-##############################################################################FRENCH#########################################################################################
+#############FRENCH#########################
 
 
 
